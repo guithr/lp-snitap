@@ -207,15 +207,77 @@ section.hero {
       max-width: 20rem;
       & h1 {
         font-size: 3rem;
+        & > div {
+          height: 3.75rem;
+        }
       }
+    }
+    & .buttons {
+      flex-direction: column;
     }
     & > div:nth-child(2) {
       max-width: 25.5rem;
       height: 25.5rem;
     }
+  }
+  @keyframes slideUp {
+    0%,
+    22% {
+      transform: translateY(0);
+    }
 
-    & .buttons {
-      flex-direction: column;
+    /* Divertida Bounce-in event */
+    23% {
+      transform: translateY(calc(-3.75rem - 11.25px));
+    }
+    25% {
+      transform: translateY(calc(-3.75rem + 6.25px));
+    }
+    27% {
+      transform: translateY(calc(-3.75rem - 1.25px));
+    }
+    29% {
+      transform: translateY(calc(-3.75rem + 1.25px));
+    }
+
+    33%,
+    55% {
+      transform: translateY(-3.75rem);
+    }
+
+    /* Divertida Bounce-in esvent */
+    56% {
+      transform: translateY(calc(-7.5rem - 11.25px));
+    }
+    58% {
+      transform: translateY(calc(-7.5rem + 6.25px));
+    }
+    60% {
+      transform: translateY(calc(-7.5rem - 1.25px));
+    }
+    62% {
+      transform: translateY(calc(-7.5rem + 1.25px));
+    }
+
+    /* Saudavel Bounce-in esvent */
+    66%,
+    88% {
+      transform: translateY(-7.5rem);
+    }
+    89% {
+      transform: translateY(calc(-11.25rem - 11.25px));
+    }
+    91% {
+      transform: translateY(calc(-11.25rem + 6.25px));
+    }
+    93% {
+      transform: translateY(calc(-11.25rem - 1.25px));
+    }
+    95% {
+      transform: translateY(calc(-11.25rem + 1.25px));
+    }
+    100% {
+      transform: translateY(-11.25rem);
     }
   }
 }
@@ -225,12 +287,15 @@ section.hero {
     justify-content: center;
     padding: 1.5rem 1.5rem 3rem;
     gap: 2rem;
-    & h1 {
-      font-size: var(--text-lg);
-      max-width: 19.5rem;
-    }
-    & h1 div {
-      height: 2.5rem;
+    & > div {
+      & h1 {
+        font-size: 2rem;
+        max-width: 19.5rem;
+
+        & > div {
+          height: 2.5rem;
+        }
+      }
     }
     & .buttons {
       flex-direction: column-reverse;
@@ -241,6 +306,66 @@ section.hero {
     }
     & .buttons {
       margin-top: 3rem;
+    }
+  }
+  @keyframes slideUp {
+    0%,
+    22% {
+      transform: translateY(0);
+    }
+
+    /* Divertida Bounce-in event */
+    23% {
+      transform: translateY(calc(-2.5rem - 12.5px));
+    }
+    25% {
+      transform: translateY(calc(-2.5rem + 7.5px));
+    }
+    27% {
+      transform: translateY(calc(-2.5rem - 2.5px));
+    }
+    29% {
+      transform: translateY(calc(-2.5rem + 2.5px));
+    }
+
+    33%,
+    55% {
+      transform: translateY(-2.5rem);
+    }
+
+    /* Divertida Bounce-in esvent */
+    56% {
+      transform: translateY(calc(-5rem - 12.5px));
+    }
+    58% {
+      transform: translateY(calc(-5rem + 7.5px));
+    }
+    60% {
+      transform: translateY(calc(-5rem - 2.5px));
+    }
+    62% {
+      transform: translateY(calc(-5rem + 2.5px));
+    }
+
+    /* Saudavel Bounce-in esvent */
+    66%,
+    88% {
+      transform: translateY(-5rem);
+    }
+    89% {
+      transform: translateY(calc(-7.5rem - 12.5px));
+    }
+    91% {
+      transform: translateY(calc(-7.5rem + 7.5px));
+    }
+    93% {
+      transform: translateY(calc(-7.5rem - 2.5px));
+    }
+    95% {
+      transform: translateY(calc(-7.5rem + 2.5px));
+    }
+    100% {
+      transform: translateY(-7.5rem);
     }
   }
 }
