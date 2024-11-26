@@ -8,9 +8,13 @@ section.gallery {
   & header {
     text-align: center;
 
-    & span {
+    & h2 {
       margin-top: 0.5rem;
+    }
+
+    & span {
       font: 500 var(--text-sm) / 1.5 var(--ff-base);
+      text-transform: uppercase;
     }
   }
   & img {
@@ -99,5 +103,39 @@ section.gallery {
   from {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+@media (width <= 64em) {
+  section.gallery {
+    & .content {
+      margin-top: 1.5rem;
+      gap: 1.5rem;
+      grid-template-areas:
+        "A B"
+        "C D";
+    }
+  }
+}
+
+@media (width <= 48em) {
+  section.gallery {
+    padding: 1.5rem 1.5rem;
+    & header {
+      & h2 {
+        font-size: 2rem;
+      }
+      & span {
+        font: 500 0.75rem / 1.5 var(--ff-base);
+      }
+    }
+    & .content {
+      margin-top: 1.5rem;
+      gap: 1.5rem;
+      grid-template-areas:
+        "A"
+        "B"
+        "C"
+        "D";
+    }
   }
 }
